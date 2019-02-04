@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Major Mono Display', monospace;
+}
+.slidesshow-container{
+    max-width: 800px;
+    position: relative;
+}
+.text{
+    position: absolute;
+    bottom: 20px;
+    color: aliceblue;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+}
+
+img{
+    max-width: 800px;
+}
+.prev, .next{
+    position: absolute;
+    top: 40%;
+    color: aliceblue;
+    font-size: 60px;
+}
+.prev:hover, .next:hover{
+    cursor: pointer;
+    color: rgb(84, 139, 139);
+}
+.prev{
+    left: 0.7%;
+}
+.next{
+    right: 0.7%;
+}
+.slides{
+    display: none;
+}
+.active{
+    display: block;
+}

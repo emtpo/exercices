@@ -1,4 +1,14 @@
-//au clique de next
+/*
+    Doit fonctionner non pas avec
+    deux slides, mais plusieurs slides
+
+    Le nombre de slides doit pouvoir être dynamique,     
+    peut importe le nombre slide on doit pouvoir      
+    aller à la slide suivante et précédente 
+*/
+
+
+ //au clique de next
 $(".next").on("click", function(){
 
    var idSlide = $(".active").attr("id");
@@ -34,6 +44,18 @@ $(".prev").on("click", function(){
         $("#one").addClass("active");
     }
 });
-
+*/
 
 //$(".arrow").on("click", function(){})
+
+
+//Première tentative: ECHEC
+ /* <script type="text/javascript"/>
+    $(function(){
+       setInterval(function(){
+          $(".slideshow ul").animate({marginLeft:-350},800,function(){
+             $(this).css({marginLeft:0}).find(".slides").after($(this).find("img:first"));
+          })
+       }, 3500);
+    });
+ <script/> */

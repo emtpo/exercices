@@ -44,7 +44,6 @@ $(".prev").on("click", function(){
         $("#one").addClass("active");
     }
 });
-*/
 
 //$(".arrow").on("click", function(){})
 

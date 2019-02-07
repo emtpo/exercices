@@ -90,13 +90,37 @@ Alors il est trop tard quand j'ai eu cette idée, je n'ai plus le temps d'essaye
 Cependant je pense qu avec des <ul> <li> <img>... <li> <img>... <\ul> cela pourrait fonctionner.
 
 En créant une function et la développer de façon à ce que:
-Quand on appuye sur suiv. le li prochain arrive et inversement. On utilise le mot next et previous. en utilisant un removeClass et addClass
-
+Quand on appuye sur suiv. le li prochain arrive et inversement. On utilise le mot next et previous. en utilisant un removeClass et addClass/*
 */
 
-
-
+var slideIndex = 0;
 var slides = $(".slides")
-console.log(slides);
+
+showSlide(slideIndex);
+
+function showSlide(NumberSlide){
+    let idSlide = slides[NumberSlide].id;
+    $(".slides").removeClass("active");
+    $(`#${idSlide}`).addClass("active");
+}
+
+$(".arrow").on("click", function(){
 
 
+    //si prev: console.log(prev)
+    if($(this).hasClass("prev")){
+        slideIndex--;
+        if(slideIndex < 0){
+            slideIndex = slides.length -1;}
+        console.log(slideIndex);
+        showSlide(slideIndex)};
+        
+    
+    //si next: console.log(next)
+    if($(this).hasClass("next")){
+        slideIndex++;
+        if(slideIndex > slides.length -1){
+            slideIndex=0;
+        }
+        showSlide(slideIndex)};
+})
